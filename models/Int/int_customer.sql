@@ -3,7 +3,7 @@
 
 
 SELECT
-    C_CUSTOMER_SK AS customer_sk,
+    c_customer_sk AS customer_sk,
     C_CUSTOMER_ID AS customer_id,
     C_FIRST_NAME AS first_name,
     C_LAST_NAME AS last_name,

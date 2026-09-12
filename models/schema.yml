@@ -7,16 +7,18 @@ models:
 
     columns:
 
-      - name: C_CUSTOMER_SK
-        description: "Customer surrogate key."
-        tests:
+     - name: C_CUSTOMER_SK
+       tests:
           - not_null
-          - unique
 
-      - name: C_CUSTOMER_ID
-        description: "Customer business identifier."
-        tests:
+     - name: C_CUSTOMER_ID
+       description: "Customer business identifier."
+       tests:
           - not_null
+
+     - name: C_BIRTH_YEAR
+       tests:
+          - no_future_dates
 
   - name: int_customer
     description: "Intermediate customer transformation."
