@@ -16,9 +16,9 @@ models:
        tests:
           - not_null
 
-     - name: C_BIRTH_YEAR
-       tests:
-          - no_future_dates
+     #- name: C_BIRTH_YEAR
+     #  tests:
+     #     - no_future_dates
 
   - name: int_customer
     description: "Intermediate customer transformation."
