@@ -1,0 +1,47 @@
+version: 2
+
+models:
+
+  - name: stg_customer
+    description: "Staging model for customer data."
+
+    columns:
+
+     - name: C_CUSTOMER_SK
+       tests:
+          - not_null
+
+     - name: C_CUSTOMER_ID
+       description: "Customer business identifier."
+       tests:
+          - not_null
+
+     - name: C_BIRTH_YEAR
+       tests:
+          - no_future_dates
+
+  - name: int_customer
+    description: "Intermediate customer transformation."
+
+    columns:
+
+      - name: customer_sk
+        tests:
+          - not_null
+
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: dim_customer
+    description: "Final table"
+    
+    columns: 
+       - name: customer_sk
+         tests:
+            - not_null
+            - unique
+
+       - name : customer_id
+         tests: 
+          - not_null
