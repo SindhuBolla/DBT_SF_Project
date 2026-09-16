@@ -1,4 +1,4 @@
-version: 2
+    version: 2
 
 sources:
   - name: tpcds
@@ -7,3 +7,4 @@ sources:
 
     tables:
       - name: customer
+      - name: customer_address
